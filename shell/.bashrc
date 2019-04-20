@@ -15,3 +15,11 @@ gpip3(){
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
+
+# remove ssh host key
+forget_host_key(){
+   echo Will remove $@ from ssh known_hosts
+   FORGET='^.*'"$@"'.*$'
+   echo regex set to $FORGET
+   sed -i.bak s'/'$FORGET'//' ~/.ssh/known_hosts
+}
