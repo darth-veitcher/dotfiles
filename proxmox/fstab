@@ -1,0 +1,7 @@
+# <file system> <mount point> <type> <options> <dump> <pass>
+/dev/pve/root / ext4 errors=remount-ro 0 1
+/dev/pve/swap none swap sw 0 0
+proc /proc proc defaults 0 0
+
+
+/dev/disk/by-uuid/0192c047-0792-4f7a-9f27-f093dd79bd2e  /data  ext4  errors=remount-ro 0 1
