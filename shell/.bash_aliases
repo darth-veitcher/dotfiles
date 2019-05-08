@@ -1,7 +1,7 @@
 alias virtualenv3='virtualenv -p /usr/local/bin/python3'
 
 # Docker stuff
-alias nuke-docker='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'
+alias nuke-docker='docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker system prune -a -f'
 alias docker-machine-local='eval $(docker-machine env -u)'
 
 # SSH
