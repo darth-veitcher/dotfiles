@@ -105,3 +105,9 @@ ENV/
 
 # Mkdocs
 site/
+
+# Notes
+notes/
+
+# Local configs
+*.local*
