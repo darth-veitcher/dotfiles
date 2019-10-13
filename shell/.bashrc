@@ -23,3 +23,24 @@ forget_host_key(){
    echo regex set to $FORGET
    sed -i.bak s'/'$FORGET'//' ~/.ssh/known_hosts
 }
+
+# create a react-native project
+create_expo(){
+  npx expo-cli init -t blank --yarn --name "$@" "$@"
+  cd "$@"
+  expo-cli install react-navigation react-native-gesture-handler react-native-reanimated react-navigation-stack axios react-native-json-tree
+}
+
+# Set Docker host for TLS remote daemon
+# Assumes you've saved the ca.pem, cert.pem, and key.pem into ~/.docker/$HOST
+# https://gist.github.com/darth-veitcher/0b2e6b64bc4ba908a307ece13e3c6bb4
+docker_host(){
+  echo "Setting host details to "$@
+  ROOT=$HOME"/.docker/$@"
+  if [ -d $ROOT ]; then
+    echo "Using certificates from "$ROOT
+    export DOCKER_TLS_VERIFY=1
+    export DOCKER_HOST=$@:2376
+    export DOCKER_CERT_PATH=$ROOT
+  fi
+}

@@ -38,3 +38,39 @@ dcleanup(){
 # https://github.com/docker/for-mac/issues/2396#issuecomment-446515510
 export ETC_LOCALTIME=$(readlink /etc/localtime)
 export LOCALTZ=$(echo $(readlink /etc/localtime) | awk -F'\/' '{print $6"/"$7}')
+
+# pyenv
+# https://medium.com/hackernoon/reaching-python-development-nirvana-bb5692adf30c
+eval "$(pyenv init -)"
+
+# import access key for gitlab
+test -f ~/.gitlab && source ~/.gitlab
+
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="/Users/jamesveitch/.nodenv/shims:${PATH}"
+export NODENV_SHELL=bash
+source '/Users/jamesveitch/.nodenv/libexec/../completions/nodenv.bash'
+command nodenv rehash 2>/dev/null
+nodenv() {
+  local command
+  command="${1:-}"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(nodenv "sh-$command" "$@")";;
+  *)
+    command nodenv "$command" "$@";;
+  esac
+}
+
+# ANDROID_HOME for ReactNative
+# https://facebook.github.io/react-native/docs/getting-started.html
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
