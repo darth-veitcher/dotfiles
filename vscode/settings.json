@@ -1,0 +1,5 @@
+{
+    // https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+}
