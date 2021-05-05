@@ -8,17 +8,18 @@ See this article [Elgato-Stream-Deck-How-to-Back-Up-and-Restore-Profiles](https:
 
 ## Teams
 
-You can access all of the hotkey shortcuts for Teams through clicking on your username in the corner and then selecting "Keyboard Shortcuts". Additionally there is a full online resource: [Keyboard shortcuts for Microsoft Teams](https://support.microsoft.com/en-gb/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2?redirectSourcePath=%252fen-us%252farticle%252fMicrosoft-Teams-keyboard-shortcuts-c796cc2e-249a-4ec3-9cd7-00766905aa56&ui=en-US&rs=en-GB&ad=GB)
+You can access all of the hotkey shortcuts for Teams through clicking on your username in the corner and then selecting "Keyboard Shortcuts". Additionally there is a full online resource: [Keyboard shortcuts for Microsoft Teams](https://support.microsoft.com/en-gb/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2)
 
 The main ones to flag (MacOS below):
 
 __Calls__
 
-* Decline call: `Command+Shift+D`
 * Toggle mute: `Command+Shift+M`
 * Toggle video: `Command+Shift+O`
 * Raise or lower your hand: `Command+Shift+K`
 * Go to sharing toolbar: `Command+Shift+Space`
+
+* Leave call: `Command+Shift+B`
 
 ## Icon Notes
 
